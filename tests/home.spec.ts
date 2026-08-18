@@ -5,7 +5,7 @@ test.describe("Home page with no auth", () => {
     await page.goto("https://practicesoftwaretesting.com/");
   });
 
-  test("visual test", async ({ page }) => {
+  test("Visual test with no auth", async ({ page }) => {
     await page.waitForLoadState("networkidle");
     await expect(page).toHaveScreenshot("home-page-no-auth.png", {
       mask: [page.getByTitle("Practice Software Testing - Toolshop")],
@@ -37,10 +37,20 @@ test.describe("Home page with no auth", () => {
   });
 });
 
+
+
 test.describe("Home page customer 01 auth", () => {
   test.use({ storageState: ".auth/customer01.json" });
   test.beforeEach(async ({ page }) => {
     await page.goto("https://practicesoftwaretesting.com/");
+  });
+
+  // run in terminal with npx playwright test tests/home.spec.ts:46 --update-snapshots
+  test("Visual test authorized", async ({ page }) => {
+    await page.waitForLoadState("networkidle");
+    await expect(page).toHaveScreenshot("home-page-customer01.png", {
+      mask: [page.getByTitle("Practice Software Testing - Toolshop")]
+    });
   });
 
   test("visual test authorized", async ({ page }) => {

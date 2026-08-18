@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "types": ["node", "playwright"],
+    "strict": true,
+    "isolatedModules": true,
+    "skipLibCheck": true
+  }
+}
