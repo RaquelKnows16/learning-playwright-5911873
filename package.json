@@ -1,0 +1,35 @@
+{
+  "name": "learning-playwright-5911873",
+  "version": "1.0.0",
+  "description": "This is the repository for the LinkedIn Learning course `learning-playwright`. The full course is available from [LinkedIn Learning][lil-course-url].",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:chromium": "npx playwright test --project=chromium",
+    "test:firefox": "npx playwright test --project=firefox",
+    "test:webkit": "npx playwright test --project=webkit",
+    "test:first": "npx playwright test --grep @first",
+    "test:local": "BASE_URL=http://localhost:4200 npx playwright test",
+    "test:report": "npx playwright test && npx playwright show-report",
+    "test:ui": "npx playwright test --ui"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaquelKnows16/learning-playwright-5911873.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/RaquelKnows16/learning-playwright-5911873/issues"
+  },
+  "homepage": "https://github.com/RaquelKnows16/learning-playwright-5911873#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0"
+  },
+  "dependencies": {
+    "typescript": "^7.0.2"
+  }
+}
